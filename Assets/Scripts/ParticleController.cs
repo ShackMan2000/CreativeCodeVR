@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing.Imaging;
 using UnityEngine;
 
 
@@ -26,8 +27,12 @@ public class ParticleController : MonoBehaviour
     [SerializeField]
     private float minEmission, maxEmission;
 
+    [SerializeField] float minLifeTime, maxLifeTime;
+
     private ParticleSystem.EmissionModule sysEmit;
 
+
+    [SerializeField] ControllerInfo rightControllerInfo;
 
     private ParticleSystem.MainModule sysMain;
 
@@ -49,9 +54,21 @@ public class ParticleController : MonoBehaviour
         if(checkCounter >= checkInterval)
         {
             checkCounter = 0f;
+            SetStartSpeed(Mathf.Clamp01(rightControllerInfo.HeightNormalized));
+            SetLifeTime(Mathf.Clamp01(rightControllerInfo.HeightNormalized));
+            SetColor(Mathf.Clamp01(rightControllerInfo.ForwardNormalized));
+
         }
     }
 
+
+    void SetColor(float percent)
+    {
+        Color c = sysMain.startColor.color;
+         Color.RGBToHSV(c, out float h, out float s, out float v);
+        Color newColor = Color.HSVToRGB(percent, s, v); 
+        sysMain.startColor = newColor;
+    }
 
     private void SetStartSpeed(float thrustInPercent)
     {  
@@ -60,6 +77,13 @@ public class ParticleController : MonoBehaviour
         sysMain.startSpeed = speed;
     }
 
+
+    void SetLifeTime(float percent)
+    {
+        float lifeTime = Mathf.Lerp(minLifeTime, maxLifeTime, percent);
+
+        sysMain.startLifetime = lifeTime;
+    }
 
 
 

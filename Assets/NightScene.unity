@@ -5837,12 +5837,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sys: {fileID: 1216588321}
-  minStartSpeed: 0
-  maxStartSpeed: 0
+  minStartSpeed: -1
+  maxStartSpeed: -10
   minPosition: {x: 0, y: 0, z: 0}
   maxPosition: {x: 0, y: 0, z: 0}
-  minEmission: 0
-  maxEmission: 0
+  minEmission: 5
+  maxEmission: 100
+  minLifeTime: 0.2
+  maxLifeTime: 5
+  rightControllerInfo: {fileID: 11400000, guid: 010f8d30a91c24743ad23ad0228a08a7, type: 2}
   inDebugMode: 0
   checkInterval: 0.1
 --- !u!4 &1216588323
@@ -11128,12 +11131,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sys: {fileID: 1983446402}
-  minStartSpeed: 0
-  maxStartSpeed: 0
+  minStartSpeed: -1
+  maxStartSpeed: -10
   minPosition: {x: 0, y: 0, z: 0}
   maxPosition: {x: 0, y: 0, z: 0}
-  minEmission: 0
-  maxEmission: 0
+  minEmission: 5
+  maxEmission: 100
+  minLifeTime: 0.2
+  maxLifeTime: 5
+  rightControllerInfo: {fileID: 11400000, guid: 010f8d30a91c24743ad23ad0228a08a7, type: 2}
   inDebugMode: 0
   checkInterval: 0.1
 --- !u!4 &1983446404
@@ -11168,7 +11174,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &2015048982
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -17193,12 +17199,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sys: {fileID: 4332343381118948321}
-  minStartSpeed: 0
-  maxStartSpeed: 0
+  minStartSpeed: -1
+  maxStartSpeed: -10
   minPosition: {x: 0, y: 0, z: 0}
   maxPosition: {x: 0, y: 0, z: 0}
-  minEmission: 0
-  maxEmission: 0
+  minEmission: 5
+  maxEmission: 100
+  minLifeTime: 0.2
+  maxLifeTime: 5
+  rightControllerInfo: {fileID: 11400000, guid: 010f8d30a91c24743ad23ad0228a08a7, type: 2}
   inDebugMode: 0
   checkInterval: 0.1
 --- !u!1 &2723381650639587075
@@ -26225,7 +26234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e7968ab2a108ea4bb477e39836060ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  head: {fileID: 9014170784879470535}
+  head: {fileID: 9014170784789085158}
   controller: {fileID: 4720636290313631284}
   controllerInfo: {fileID: 11400000, guid: 010f8d30a91c24743ad23ad0228a08a7, type: 2}
 --- !u!4 &9014170784789085158
