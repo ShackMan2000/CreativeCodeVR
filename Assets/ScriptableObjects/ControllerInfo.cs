@@ -12,6 +12,10 @@ public class ControllerInfo : ScriptableObject
 
     public Vector3 controllerPosition;
 
+    public float HeightNormalized => controllerPosition.y * 5f;
+    public float ForwardNormalized => Mathf.InverseLerp(0.2f, 0.7f, controllerPosition.z);
+    public float HorizontalNormalized => controllerPosition.x * 5f;
+
 
     //save the last 10 seconds
     [SerializeField] List<Vector3> movements = new List<Vector3>();

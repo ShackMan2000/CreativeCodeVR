@@ -17,8 +17,8 @@ public class ControllerDebugUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        positionText.text = "p: " + info.controllerPosition.ToString();
-        lastSecondMovement.text = "Last 1:" + info.GetMovementLastSeconds(1f);
+        positionText.text = "height: " + info.HeightNormalized.ToString();
+        lastSecondMovement.text = "forward :" + info.ForwardNormalized.ToString();
         last4SecondsMovement.text = "Last 4:" + info.GetMovementLastSeconds(4f);
     }
 }
