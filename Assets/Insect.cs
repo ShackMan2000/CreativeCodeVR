@@ -17,11 +17,12 @@ public class Insect : MonoBehaviour
         StartCoroutine(DestroyAfterSeconds(lifeTime));
     }
 
-    public void Initialize(float roamRadius, Vector3 roamCenter, float speed, float lifeSpan)
+    public void Initialize(float roamRadius, Vector3 roamCenter, float speed, float lifeTime)
     {
         this.roamRadius = roamRadius;
         this.roamCenter = roamCenter;
         this.speed = speed;
+        this.lifeTime = lifeTime;
     }
 
     void Update()
